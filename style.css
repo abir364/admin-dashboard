@@ -1,0 +1,46 @@
+/* wrapper makes 2 column grid */
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+/* header take column 2 row 1(auto-magically) */
+.header {
+    grid-column: 2 / 3;
+}
+
+/* sidebar takes whole column 1 */
+.sidebar {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+/* main takes rest of 2*2 grid and main itself is a 2 column grid */
+
+.main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+/* project takes grid column 1 whole */
+.projects {
+    grid-area: 1 / 1 / 3 / 2;
+}
+
+/* topbar makes grid of 1 column where search takes the column and rest is overflowed to its right */
+.topbar {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-flow: column;
+    padding: 0.5rem;
+}
+
+.search {
+    width: 50%;
+}
+
+/* right makes row flex with some gap */
+.right {
+    display: flex;
+    gap: 1rem;
+}
