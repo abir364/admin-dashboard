@@ -1,3 +1,9 @@
+*{
+    border: 0;
+    margin: 0;
+    outline: 1px solid red;
+}
+
 /* wrapper makes 2 column grid */
 .wrapper {
     display: grid;
@@ -20,6 +26,7 @@
 .main {
     display: grid;
     grid-template-columns: 3fr 1fr;
+    gap: 10px
 }
 
 /* project takes grid column 1 whole */
@@ -43,4 +50,20 @@
 .right {
     display: flex;
     gap: 1rem;
+}
+
+/* structuring lowbar */
+.lowbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+
+.welcome {
+    display: flex;
+    gap: 2em;
+}
+
+.lowbar-buttons {
+    align-self: center;
 }
