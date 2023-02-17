@@ -1,24 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 *{
-    border: 0;
     margin: 0;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
+    font-family: Roboto;
+    box-sizing: border-box;
 }
 
 /* wrapper makes 2 column grid */
 .wrapper {
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 5fr;
 }
 
 /* header take column 2 row 1(auto-magically) */
 .header {
     grid-column: 2 / 3;
+    box-shadow: 0 3px 5px rgb(57 63 72 / 30%);
+    z-index: 999;
 }
 
 /* sidebar takes whole column 1 */
 .sidebar {
     grid-column: 1 / 2;
     grid-row: 1 / 3;
+    background-color: #1992D4;
+    color: white;
+    padding: 1.5em;
 }
 
 /* main takes rest of 2*2 grid and main itself is a 2 column grid */
@@ -26,12 +34,15 @@
 .main {
     display: grid;
     grid-template-columns: 3fr 1fr;
-    gap: 10px
+    gap: 10px;
+    background-color: #E2E8F0;
+    padding: 10px;
 }
 
 /* project takes grid column 1 whole */
 .projects {
     grid-area: 1 / 1 / 3 / 2;
+    padding: 10px;
 }
 
 /* topbar makes grid of 1 column where search takes the column and rest is overflowed to its right */
@@ -40,6 +51,8 @@
     grid-template-columns: 1fr;
     grid-auto-flow: column;
     padding: 0.5rem;
+    padding-bottom: 1.5rem;
+    width: 95%;
 }
 
 .search {
@@ -57,6 +70,7 @@
     display: flex;
     justify-content: space-between;
     padding: 0.5rem;
+    padding-top: 0;
 }
 
 .welcome {
@@ -65,5 +79,45 @@
 }
 
 .lowbar-buttons {
+    width: 40%;
     align-self: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+    gap: 10px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 5%;
+    padding: 1rem;
+    border-left: 7px solid #F0B429 ;
+    height: clamp(150px, 50vh, 250px);
+}
+
+/* card shadow */
+.card {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+h1 {
+    padding-bottom: 20px;
+}
+
+.announcements, .trending {
+    padding: 10px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.group1>* , .group2>* {
+    padding-bottom: 1em;
 }
