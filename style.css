@@ -56,7 +56,7 @@
 }
 
 .search {
-    width: 50%;
+    width: 100%;
 }
 
 /* right makes row flex with some gap */
@@ -79,7 +79,7 @@
 }
 
 .lowbar-buttons {
-    width: 40%;
+    width: 50%;
     align-self: center;
     display: flex;
     justify-content: space-evenly;
@@ -94,7 +94,7 @@
 .card {
     background-color: white;
     border-radius: 2.5%;
-    padding: 1rem;
+    padding: 2rem;
     border-left: 7px solid #F0B429 ;
     height: clamp(150px, 50vh, 250px);
 }
@@ -120,4 +120,139 @@ h1 {
 
 .group1>* , .group2>* {
     padding-bottom: 1em;
+}
+
+.announce-cards{
+    padding-bottom: .5rem;
+}
+
+.announce-cards:last-child {
+    padding-bottom: 0rem;
+    padding-top: .5rem;
+}
+
+.announce-cards:nth-child(2n) {
+    border-bottom: 1px solid #E2E8F0;
+    border-top: 1px solid #E2E8F0;
+    padding-top: .5rem;
+}
+
+.announce-box, .trends-box {
+    padding: 2rem;
+    background-color: white;
+    border-radius: 2.5%;
+}
+
+.trends-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding-inline-start: 0;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li, .card {
+    transition: all .2s ease-in-out;
+}
+
+li:hover {
+    background-color: #0d85c5;
+    font-size: 1.5em;
+    padding: .5rem;
+    transform: scale(1.1);
+}
+
+.card:hover {
+    padding: 2.5rem;
+    transform: scale(1.1);
+}
+
+.dash-title {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.dash-logo {
+    height: 2.5em;
+    fill: white;
+}
+
+li {
+    display: flex;
+    gap: .5rem;
+}
+
+li > svg {
+    height: 1.2em;
+    fill: white;
+}
+
+.icons3 {
+    display: flex;
+    gap: .5em;
+    justify-content: flex-end;
+    position: relative;
+    padding-top: 2rem;
+}
+
+.icons3 > svg {
+    height: 2rem;
+    
+}
+
+.bell {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	outline: inherit;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.search-sec {
+    height: 1.5rem;
+    width: 1.5rem;
+    display: flex;
+    gap: 2.5em;
+    width: 60%;
+    padding-left: 1.5em;
+}
+
+.search {
+    border-radius: 25px;
+    border: 0;
+    background-color: #E2E8F0;
+}
+
+.lowbar button {
+    background-color: #1992D4;
+    padding: .5rem;
+    width: 10vw;
+    font-size: 16px;
+    color: white;
+    border: 0;
+    border-radius: 25px;
+}
+
+.lowbar button:hover {
+    transform: translateY(-5px);
+    background-color: #0d85c5;
+}
+
+.lowbar button:active {
+    transform: translateY(0px);
 }
