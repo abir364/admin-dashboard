@@ -256,3 +256,39 @@ li > svg {
 .lowbar button:active {
     transform: translateY(0px);
 }
+
+.small-avatar > img {
+    height: 2rem;
+    width: 2rem;
+}
+
+.avatar > img {
+    height: 3rem;
+    width: 3rem;
+}
+
+.welcome {
+    padding-left: 1.5em;
+}
+
+.trends {
+    display: flex;
+    gap: 2rem;
+}
+
+.main h1 {
+    font-size: 1rem;
+}
+
+.welcome span {
+    font-size: .8rem;
+}
+.welcome .name {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.right .name {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
